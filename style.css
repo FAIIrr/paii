@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0a0a0a;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar a {
+    color: #0ff;
+    text-decoration: none;
+    margin: 0 20px;
+    text-shadow: 0 0 10px #0ff;
+    transition: all 0.3s;
+}
+
+.navbar a:hover {
+    color: #f0f;
+    text-shadow: 0 0 20px #f0f;
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.brand-name {
+    color: #0ff;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #f0f;
+}
+
+.brand-subtitle {
+    color: #f0f;
+    font-size: 0.9em;
+    text-shadow: 0 0 10px #f0f;
+    animation: typing 3s steps(20) infinite, blink 0.5s step-end infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #f0f;
+}
+
+/* Sections */
+.section {
+    min-height: 60vh;
+    padding: 50px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(45deg, #0ff, #f0f);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    padding-top: 80px;
+}
+
+#hero h1 {
+    font-size: 4em;
+    text-shadow: 0 0 20px #0ff, 0 0 40px #f0f;
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+/* Profile Image Container */
+.profile-container {
+    position: relative;
+    width: 250px; /* Diperbesar dari 200px */
+    height: 250px; /* Diperbesar dari 200px */
+    margin: 0 auto 30px;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    clip-path: url(#moon-shape);
+    position: relative;
+    z-index: 2;
+    background: transparent;
+    animation: rotate 10s linear infinite; /* Animasi rotasi */
+    filter: drop-shadow(0 0 15px #0ff) drop-shadow(0 0 30px #f0f); /* Efek neon intens */
+    transition: all 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.1); /* Pembesaran saat hover */
+    filter: drop-shadow(0 0 20px #f0f) drop-shadow(0 0 40px #0ff); /* Perubahan warna neon saat hover */
+}
+
+.neon-ring {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 290px; /* Disesuaikan dengan ukuran baru container */
+    height: 290px; /* Disesuaikan dengan ukuran baru container */
+    border: 3px solid #0ff;
+    border-radius: 50%;
+    animation: pulse 2s infinite, color-shift 4s infinite; /* Animasi warna berganti */
+    box-shadow: 0 0 20px #0ff, 0 0 40px #f0f;
+    z-index: 1;
+}
+
+/* SVG untuk bentuk bulan */
+svg {
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+/* About Section */
+#about {
+    background: rgba(10, 10, 10, 0.9);
+    text-align: center;
+}
+
+.neon-text {
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+/* Skills Section */
+#skills {
+    background: rgba(10, 10, 10, 0.9);
+    text-align: center;
+}
+
+.skills-logos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.skill-logo {
+    width: 80px;
+    height: 80px;
+    transition: all 0.3s;
+    filter: drop-shadow(0 0 10px #0ff);
+}
+
+.skill-logo:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 20px #f0f);
+}
+
+/* Animations */
+@keyframes neon {
+    from {
+        text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #f0f;
+    }
+    to {
+        text-shadow: 0 0 20px #0ff, 0 0 30px #f0f, 0 0 40px #f0f;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes color-shift {
+    0% {
+        border-color: #0ff;
+        box-shadow: 0 0 20px #0ff, 0 0 40px #f0f;
+    }
+    50% {
+        border-color: #f0f;
+        box-shadow: 0 0 20px #f0f, 0 0 40px #0ff;
+    }
+    100% {
+        border-color: #0ff;
+        box-shadow: 0 0 20px #0ff, 0 0 40px #f0f;
+    }
+}

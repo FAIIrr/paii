@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="brand">
+            <span class="brand-name">Paii</span>
+            <span class="brand-subtitle">i'm a FullStack Developer</span>
+        </div>
+        <div class="nav-links">
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="section">
+        <div>
+            <!-- SVG untuk clip path bentuk bulan -->
+            <svg>
+                <defs>
+                    <clipPath id="moon-shape">
+                        <path d="M100,0 A100,100 0 0,1 200,100 A100,100 0 0,1 100,200 A100,100 0 0,0 0,100 A50,50 0 0,1 100,0 Z"/>
+                    </clipPath>
+                </defs>
+            </svg>
+
+            <!-- Profile Image dengan neon ring -->
+            <div class="profile-container">
+                <img src="gambar.png" alt="Cat Logo" class="profile-image">
+                <div class="neon-ring"></div>
+            </div>
+
+            <h1>Hi, I'm PaiiDev</h1>
+            <p class="neon-text">Web Developer | Designer | Creative</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div>
+            <h2 class="neon-text">About Me</h2>
+            <p>Halo, saya [Nama Anda], seorang Web Developer yang penuh semangat dan dedikasi dalam menciptakan website yang indah, fungsional, dan ramah pengguna. Saya mengkhususkan diri dalam membangun aplikasi web dinamis menggunakan teknologi modern seperti HTML, CSS, JavaScript, dan PHP.
+
+                Saya percaya bahwa website yang baik tidak hanya tentang kode, tetapi juga tentang menciptakan pengalaman yang disukai oleh pengguna. Mulai dari merancang desain yang responsif, mengoptimalkan performa, hingga menyelesaikan tantangan kompleks di backend, saya menikmati setiap tahap dalam proses pengembangan.
+                
+                Ketika tidak sedang menulis kode, saya senang menjelajahi tren teknologi terbaru, berkontribusi pada proyek open-source, atau sekadar menikmati secangkir kopi sambil merencanakan ide-ide kreatif berikutnya. Mari kita ciptakan sesuatu yang luar biasa bersama!.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div>
+            <h2 class="neon-text">My Skills</h2>
+            <div class="skills-logos">
+                <img src="https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/html5/html5-original.svg" alt="HTML" class="skill-logo">
+                <img src="https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/css3/css3-original.svg" alt="CSS" class="skill-logo">
+                <img src="https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/php/php-original.svg" alt="PHP" class="skill-logo">
+                <img src="https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div>
+            <h2 class="neon-text">Contact Me</h2>
+            <p>Email     : polosanyzclc@gmail.com</p>
+            <p>whatsapp  : 6282172291324</p>
+            <p>tiktok    : @diza_39</p>
+            <p>instagram : @faii_awikwok</p>
+        </div>
+    </section>
+</body>
+</html>
